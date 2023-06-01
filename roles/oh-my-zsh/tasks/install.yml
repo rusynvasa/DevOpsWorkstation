@@ -5,6 +5,10 @@
   ansible.builtin.package:
     name: '{{ oh_my_zsh_dependencies }}'
     state: present
+  register: command_output
+- name: Debug Message
+  ansible.builtin.debug:
+    var: command_output
 
 - name: Clone oh-my-zsh for users
   tags:
@@ -23,6 +27,10 @@
   loop_control:
     loop_var: user
     label: '{{ user.username }}'
+  register: command_output
+- name: Debug Message
+  ansible.builtin.debug:
+    var: command_output
 
 - name: Set permissions of oh-my-zsh for users
   become: true
@@ -38,6 +46,10 @@
   loop_control:
     loop_var: user
     label: '{{ user.username }}'
+  register: command_output
+- name: Debug Message
+  ansible.builtin.debug:
+    var: command_output
 
 - name: Set default shell for users
   become: true
@@ -49,7 +61,29 @@
   loop_control:
     loop_var: user
     label: '{{ user.username }}'
+  register: command_output
+- name: Debug Message
+  ansible.builtin.debug:
+    var: command_output
 
+#################################
+- name: Debug users
+  ansible.builtin.debug:
+    var: users
+
+# - name: Debug default({})).install
+#   ansible.builtin.debug:
+#     var: default({}).install
+
+# - name: Debug default(oh_my_zsh_install
+#   ansible.builtin.debug:
+#     var: default(oh_my_zsh_install
+
+# - name: Debug bool
+#   ansible.builtin.debug:
+#     var: "bool"
+########################################################################
+  
 - name: Write .zshrc for users
   become: true
   become_user: '{{ user.username }}'
@@ -67,3 +101,7 @@
   loop_control:
     loop_var: user
     label: '{{ user.username }}'
+  register: command_output
+- name: Debug Message
+  ansible.builtin.debug:
+    var: command_output
