@@ -1,14 +1,3 @@
-# - name: Test
-#   gather_facts: false
-#   hosts: ubuntu_22  # Specify the target hosts or groups
-#   tasks:
-#     - name: Print a message
-#       command: ip a
-#       register: command_output
-#     - name: Debug
-#       ansible.builtin.debug:
-#         var: command_output
-  
 - name: Configure my workstantion
   hosts: ubuntu_22  # Specify the target hosts or groups
   become: true  # If the role requires elevated privileges
@@ -21,6 +10,10 @@
           theme: robbyrussell
           plugins:
             - git
+            - zsh-syntax-highlighting
+            - zsh-autosuggestions
+            - aws
+            # - jsontools
           update_mode: reminder
           update_frequency: 3
-          write_zshrc: false
+          write_zshrc: true

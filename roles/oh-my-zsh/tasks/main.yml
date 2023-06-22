@@ -9,22 +9,13 @@
         - default.yml
       paths:
         - vars/os_family
-  register: command_output
-- name: Debug Message
-  ansible.builtin.debug:
-    var: command_output
+
 
 - name: Install Oh My Zsh
   ansible.builtin.import_tasks: install.yml
-  register: command_output
-- name: Debug Message
-  ansible.builtin.debug:
-    var: command_output
+
+
 
 - name: Console setup for Debian family distributions
   ansible.builtin.include_tasks: debian-console-setup.yml
   when: ansible_facts.os_family == 'Debian'
-  register: command_output
-- name: Debug Message
-  ansible.builtin.debug:
-    var: command_output

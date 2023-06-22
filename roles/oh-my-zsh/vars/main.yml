@@ -4,3 +4,4 @@
 oh_my_zsh_dependencies:
   - git
   - zsh
+  - thefuck
