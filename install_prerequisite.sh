@@ -1,5 +1,6 @@
 #!/bin/bash
 set -x
+sudo apt update
 sudo apt install -y ansible
 
 ansible --version

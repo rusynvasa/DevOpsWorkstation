@@ -1,19 +1,9 @@
 - name: Configure my workstantion
   hosts: ubuntu_22  # Specify the target hosts or groups
-  become: true  # If the role requires elevated privileges
+  # become: true  # If the role requires elevated privileges
   
   roles:
-    - role: oh-my-zsh  # Name of the role to be executed
-      users:
-      - username: devops  # Specify your username
-        oh_my_zsh:
-          theme: robbyrussell
-          plugins:
-            - git
-            - zsh-syntax-highlighting
-            - zsh-autosuggestions
-            - aws
-            # - jsontools
-          update_mode: reminder
-          update_frequency: 3
-          write_zshrc: true
+    - role: ansible-role-oh-my-zsh-p10k-master  # Name of the role to be executed
+      vars:
+        users:
+            - username: devops

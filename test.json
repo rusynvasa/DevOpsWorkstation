@@ -1,1 +1,130 @@
-changed: [ubuntu_22] => (item=devops) => {"ansible_loop_var": "user", "changed": true, "cmd": ["ls", "-la", "~devops/"], "delta": "0:00:00.008378", "end": "2023-06-01 16:25:32.357427", "msg": "", "rc": 0, "start": "2023-06-01 16:25:32.349049", "stderr": "", "stderr_lines": [], "stdout": "total 356\ndrwxr-x--- 18 devops devops   4096 чер  1 16:25 .\ndrwxr-xr-x  3 root   root     4096 тра 25 16:55 ..\ndrwx------  3 devops devops   4096 чер  1 14:40 .ansible\n-rw-------  1 devops devops    169 тра 26 16:59 .bash_history\n-rw-r--r--  1 devops devops    220 тра 25 16:55 .bash_logout\n-rw-r--r--  1 devops devops   3771 тра 25 16:55 .bashrc\ndrwx------ 10 devops devops   4096 тра 25 20:18 .cache\ndrwx------ 12 devops devops   4096 чер  1 15:58 .config\ndrwxr-xr-x  2 devops devops   4096 тра 25 17:09 Desktop\ndrwxr-xr-x  2 devops devops   4096 тра 25 17:09 Documents\ndrwxr-xr-x  2 devops devops   4096 тра 25 17:09 Downloads\ndrwx------  2 devops devops   4096 тра 26 11:53 .gnupg\n-rw-------  1 devops devops     20 тра 25 20:16 .lesshst\ndrwx------  3 devops devops   4096 тра 25 17:09 .local\ndrwxr-xr-x  2 devops devops   4096 тра 25 17:09 Music\ndrwxrwxr-x 12 devops devops   4096 чер  1 14:41 .oh-my-zsh\ndrwxr-xr-x  2 devops devops   4096 тра 25 17:09 Pictures\n-rw-r--r--  1 devops devops    807 тра 25 16:55 .profile\ndrwxr-xr-x  2 devops devops   4096 тра 25 17:09 Public\ndrwx------  3 devops devops   4096 тра 25 17:10 snap\ndrwx------  2 devops devops   4096 тра 26 12:15 .ssh\n-rw-r--r--  1 devops devops      0 тра 25 17:22 .sudo_as_admin_successful\ndrwxr-xr-x  2 devops devops   4096 тра 25 17:09 Templates\ndrwxr-xr-x  2 devops devops   4096 тра 25 17:09 Videos\n-rw-rw-r--  1 devops devops  49381 чер  1 14:42 .zcompdump\n-rw-rw-r--  1 devops devops  51533 чер  1 15:58 .zcompdump-devops-VirtualBox-5.8.1\n-r--r--r--  1 devops devops 118488 чер  1 15:58 .zcompdump-devops-VirtualBox-5.8.1.zwc\n-rw-------  1 devops devops    830 чер  1 15:58 .zsh_history\n-rw-r--r--  1 devops devops   3473 чер  1 16:25 .zshrc\n-rw-r--r--  1 devops devops   3473 чер  1 16:14 .zshrc.10409.2023-06-01@16:15:52~\n-rw-r--r--  1 devops devops   3463 чер  1 16:15 .zshrc.10812.2023-06-01@16:19:07~\n-rw-r--r--  1 devops devops   3473 чер  1 16:19 .zshrc.11592.2023-06-01@16:20:59~\n-rw-r--r--  1 devops devops   3463 чер  1 16:20 .zshrc.12015.2023-06-01@16:22:46~\n-rw-r--r--  1 devops devops   3473 чер  1 16:22 .zshrc.12437.2023-06-01@16:24:03~\n-rw-r--r--  1 devops devops   3463 чер  1 16:24 .zshrc.12861.2023-06-01@16:25:30~\n-rw-r--r--  1 devops devops   3434 чер  1 14:41 .zshrc.7880.2023-06-01@15:57:48~\n-rw-r--r--  1 devops devops   3459 чер  1 15:57 .zshrc.8412.2023-06-01@16:04:28~\n-rw-r--r--  1 devops devops   3463 чер  1 16:04 .zshrc.9693.2023-06-01@16:14:38~", "stdout_lines": ["total 356", "drwxr-x--- 18 devops devops   4096 чер  1 16:25 .", "drwxr-xr-x  3 root   root     4096 тра 25 16:55 ..", "drwx------  3 devops devops   4096 чер  1 14:40 .ansible", "-rw-------  1 devops devops    169 тра 26 16:59 .bash_history", "-rw-r--r--  1 devops devops    220 тра 25 16:55 .bash_logout", "-rw-r--r--  1 devops devops   3771 тра 25 16:55 .bashrc", "drwx------ 10 devops devops   4096 тра 25 20:18 .cache", "drwx------ 12 devops devops   4096 чер  1 15:58 .config", "drwxr-xr-x  2 devops devops   4096 тра 25 17:09 Desktop", "drwxr-xr-x  2 devops devops   4096 тра 25 17:09 Documents", "drwxr-xr-x  2 devops devops   4096 тра 25 17:09 Downloads", "drwx------  2 devops devops   4096 тра 26 11:53 .gnupg", "-rw-------  1 devops devops     20 тра 25 20:16 .lesshst", "drwx------  3 devops devops   4096 тра 25 17:09 .local", "drwxr-xr-x  2 devops devops   4096 тра 25 17:09 Music", "drwxrwxr-x 12 devops devops   4096 чер  1 14:41 .oh-my-zsh", "drwxr-xr-x  2 devops devops   4096 тра 25 17:09 Pictures", "-rw-r--r--  1 devops devops    807 тра 25 16:55 .profile", "drwxr-xr-x  2 devops devops   4096 тра 25 17:09 Public", "drwx------  3 devops devops   4096 тра 25 17:10 snap", "drwx------  2 devops devops   4096 тра 26 12:15 .ssh", "-rw-r--r--  1 devops devops      0 тра 25 17:22 .sudo_as_admin_successful", "drwxr-xr-x  2 devops devops   4096 тра 25 17:09 Templates", "drwxr-xr-x  2 devops devops   4096 тра 25 17:09 Videos", "-rw-rw-r--  1 devops devops  49381 чер  1 14:42 .zcompdump", "-rw-rw-r--  1 devops devops  51533 чер  1 15:58 .zcompdump-devops-VirtualBox-5.8.1", "-r--r--r--  1 devops devops 118488 чер  1 15:58 .zcompdump-devops-VirtualBox-5.8.1.zwc", "-rw-------  1 devops devops    830 чер  1 15:58 .zsh_history", "-rw-r--r--  1 devops devops   3473 чер  1 16:25 .zshrc", "-rw-r--r--  1 devops devops   3473 чер  1 16:14 .zshrc.10409.2023-06-01@16:15:52~", "-rw-r--r--  1 devops devops   3463 чер  1 16:15 .zshrc.10812.2023-06-01@16:19:07~", "-rw-r--r--  1 devops devops   3473 чер  1 16:19 .zshrc.11592.2023-06-01@16:20:59~", "-rw-r--r--  1 devops devops   3463 чер  1 16:20 .zshrc.12015.2023-06-01@16:22:46~", "-rw-r--r--  1 devops devops   3473 чер  1 16:22 .zshrc.12437.2023-06-01@16:24:03~", "-rw-r--r--  1 devops devops   3463 чер  1 16:24 .zshrc.12861.2023-06-01@16:25:30~", "-rw-r--r--  1 devops devops   3434 чер  1 14:41 .zshrc.7880.2023-06-01@15:57:48~", "-rw-r--r--  1 devops devops   3459 чер  1 15:57 .zshrc.8412.2023-06-01@16:04:28~", "-rw-r--r--  1 devops devops   3463 чер  1 16:04 .zshrc.9693.2023-06-01@16:14:38~"], "user": {"oh_my_zsh": {"plugins": ["git", "zsh-syntax-highlighting", "zsh-autosuggestions", "aws", "jsontools"], "theme": "robbyrussell", "update_frequency": 3, "update_mode": "reminder", "write_zshrc": true}, "username": "devops"}}
+TASK [ansible-role-oh-my-zsh-p10k-master : Install colorls gem and its dependencies
+] *******************************************************************************************
+failed: [ubuntu_22
+] (item=colorls) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "cmd": "/usr/bin/gem install --norc --version 1.4.6 --no-user-install --no-document colorls",
+    "item": "colorls",
+    "msg": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.",
+    "rc": 1,
+    "stderr": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.\n",
+    "stderr_lines": [
+        "ERROR:  While executing gem ... (Gem::FilePermissionError)",
+        "    You don't have write permissions for the /var/lib/gems/3.0.0 directory."
+    ],
+    "stdout": "",
+    "stdout_lines": []
+}
+failed: [ubuntu_22
+] (item=addressable) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "cmd": "/usr/bin/gem install --norc --version 2.8.4 --no-user-install --no-document addressable",
+    "item": "addressable",
+    "msg": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.",
+    "rc": 1,
+    "stderr": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.\n",
+    "stderr_lines": [
+        "ERROR:  While executing gem ... (Gem::FilePermissionError)",
+        "    You don't have write permissions for the /var/lib/gems/3.0.0 directory."
+    ],
+    "stdout": "",
+    "stdout_lines": []
+}
+failed: [ubuntu_22
+] (item=public_suffix) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "cmd": "/usr/bin/gem install --norc --version 5.0.1 --no-user-install --no-document public_suffix",
+    "item": "public_suffix",
+    "msg": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.",
+    "rc": 1,
+    "stderr": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.\n",
+    "stderr_lines": [
+        "ERROR:  While executing gem ... (Gem::FilePermissionError)",
+        "    You don't have write permissions for the /var/lib/gems/3.0.0 directory."
+    ],
+    "stdout": "",
+    "stdout_lines": []
+}
+failed: [ubuntu_22
+] (item=clocale) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "cmd": "/usr/bin/gem install --norc --version 0.0.4 --no-user-install --no-document clocale",
+    "item": "clocale",
+    "msg": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.",
+    "rc": 1,
+    "stderr": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.\n",
+    "stderr_lines": [
+        "ERROR:  While executing gem ... (Gem::FilePermissionError)",
+        "    You don't have write permissions for the /var/lib/gems/3.0.0 directory."
+    ],
+    "stdout": "",
+    "stdout_lines": []
+}
+failed: [ubuntu_22
+] (item=filesize) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "cmd": "/usr/bin/gem install --norc --version 0.2.0 --no-user-install --no-document filesize",
+    "item": "filesize",
+    "msg": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.",
+    "rc": 1,
+    "stderr": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.\n",
+    "stderr_lines": [
+        "ERROR:  While executing gem ... (Gem::FilePermissionError)",
+        "    You don't have write permissions for the /var/lib/gems/3.0.0 directory."
+    ],
+    "stdout": "",
+    "stdout_lines": []
+}
+failed: [ubuntu_22
+] (item=manpages) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "cmd": "/usr/bin/gem install --norc --version 0.6.1 --no-user-install --no-document manpages",
+    "item": "manpages",
+    "msg": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.",
+    "rc": 1,
+    "stderr": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.\n",
+    "stderr_lines": [
+        "ERROR:  While executing gem ... (Gem::FilePermissionError)",
+        "    You don't have write permissions for the /var/lib/gems/3.0.0 directory."
+    ],
+    "stdout": "",
+    "stdout_lines": []
+}
+failed: [ubuntu_22
+] (item=rainbow) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "cmd": "/usr/bin/gem install --norc --version 3.1.1 --no-user-install --no-document rainbow",
+    "item": "rainbow",
+    "msg": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.",
+    "rc": 1,
+    "stderr": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.\n",
+    "stderr_lines": [
+        "ERROR:  While executing gem ... (Gem::FilePermissionError)",
+        "    You don't have write permissions for the /var/lib/gems/3.0.0 directory."
+    ],
+    "stdout": "",
+    "stdout_lines": []
+}
+failed: [ubuntu_22
+] (item=unicode-display_width) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "cmd": "/usr/bin/gem install --norc --version 2.4.2 --no-user-install --no-document unicode-display_width",
+    "item": "unicode-display_width",
+    "msg": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.",
+    "rc": 1,
+    "stderr": "ERROR:  While executing gem ... (Gem::FilePermissionError)\n    You don't have write permissions for the /var/lib/gems/3.0.0 directory.\n",
+    "stderr_lines": [
+        "ERROR:  While executing gem ... (Gem::FilePermissionError)",
+        "    You don't have write permissions for the /var/lib/gems/3.0.0 directory."
+    ],
+    "stdout": "",
+    "stdout_lines": []
+}

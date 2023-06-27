@@ -1,2 +1,7 @@
 ---
-# vars file for tomereli.proxy
+# vars file for
+
+dependencies: 
+  - git
+  - zsh
+  - thefuck

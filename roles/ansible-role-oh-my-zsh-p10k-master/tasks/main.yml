@@ -1,81 +1,85 @@
 ---
-
 - name: install dependencies
-  become: yes
-  package:
-    name:
-      - git
-      - zsh
+  become: true
+  ansible.builtin.package:
+    name: "{{ dependencies }}"
     state: present
 
+
 - name: clone oh-my-zsh for users
-  become: yes
-  become_user: '{{ item.username }}'
-  git:
-    repo: 'https://github.com/robbyrussell/oh-my-zsh.git'
+  become_user: "{{ item.username }}"
+  ansible.builtin.git:
+    repo: "https://github.com/robbyrussell/oh-my-zsh.git"
     version: master
-    dest: '~/.oh-my-zsh'
-  with_items: '{{ users }}'
+    dest: "~/.oh-my-zsh"
+    depth: 1
+  with_items: "{{ users }}"
   when: users is defined
 
 - name: clone powerlevel10k for users
-  become: yes
-  become_user: '{{ item.username }}'
-  git:
-    repo: 'https://github.com/romkatv/powerlevel10k.git'
+  become_user: "{{ item.username }}"
+  ansible.builtin.git:
+    repo: "https://github.com/romkatv/powerlevel10k.git"
     version: master
-    dest: '~/.oh-my-zsh/custom/themes/powerlevel10k'
-  with_items: '{{ users }}'
+    dest: "~/.oh-my-zsh/custom/themes/powerlevel10k"
+    depth: 1
+  with_items: "{{ users }}"
   when: users is defined
 
 - name: clone zsh-autosuggestions for users
-  become: yes
-  become_user: '{{ item.username }}'
-  git:
-    repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
+  become_user: "{{ item.username }}"
+  ansible.builtin.git:
+    repo: "https://github.com/zsh-users/zsh-autosuggestions.git"
+    depth: 1
     version: master
-    dest: '~/.oh-my-zsh/custom/plugins/zsh-autosuggestions'
-  with_items: '{{ users }}'
+    dest: "~/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+  with_items: "{{ users }}"
   when: users is defined
 
 - name: clone zsh-syntax-highlighting for users
-  become: yes
-  become_user: '{{ item.username }}'
-  git:
-    repo: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
+  become_user: "{{ item.username }}"
+  ansible.builtin.git:
+    repo: "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    depth: 1
     version: master
-    dest: '~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting'
-  with_items: '{{ users }}'
+    dest: "~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+  with_items: "{{ users }}"
   when: users is defined
 
 - name: write .zshrc for users
-  become: yes
-  template:
+  become_user: "{{ item.username }}"
+  ansible.builtin.template:
     src: "{{ zshrc_src_template }}"
-    dest: '~/.zshrc'
+    dest: "~/.zshrc"
     backup: yes
-    mode: 'u=rw,go=r'
-    group: '{{ item.username }}'
-    owner: '{{ item.username }}'
-  with_items: '{{ users }}'
+    mode: "u=rw,go=r"
+    group: "{{ item.username }}"
+    owner: "{{ item.username }}"
+  with_items: "{{ users }}"
   when: users is defined
 
 - name: write .p10k.zsh for users
-  become: yes
-  copy:
+  become_user: "{{ item.username }}"
+  ansible.builtin.copy:
     src: "{{ p10k_src_file }}"
     dest: ~/.p10k.zsh
     backup: yes
-    mode: 'u=rw,go=r'
-    group: '{{ item.username }}'
-    owner: '{{ item.username }}'
-  with_items: '{{ users }}'
+    mode: "u=rw,go=r"
+    group: "{{ item.username }}"
+    owner: "{{ item.username }}"
+  with_items: "{{ users }}"
   when: users is defined
 
 - name: set default shell for users
-  become: yes
-  user:
-    name: '{{ item.username }}'
+  become: true
+  ansible.builtin.user:
+    name: "{{ item.username }}"
     shell: /bin/zsh
-  with_items: '{{ users }}'
-  when: users is defined 
+  with_items: "{{ users }}"
+  when: users is defined
+
+- name: Import colorls.yml for installing colorls and fonts
+  ansible.builtin.import_tasks: colorls.yml
+  when: "'colorls' in ansible_run_tags"
+  tags:
+    - colorls
